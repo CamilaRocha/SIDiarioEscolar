@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Camada de Apresentação", "1. Camada de Apresentação", "{AB9545F4-0F4A-40CE-86C8-277E0765B62B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiarioEscolar.WindowsForms", "DiarioEscolar.WindowsForms\DiarioEscolar.WindowsForms.csproj", "{65185762-E075-4340-B168-80192BCD2584}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Camada de Aplicação", "2. Camada de Aplicação", "{DE07AA0D-0D5A-4591-B43B-42EF231D3BD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiarioEscolar.Aplicacacao", "DiarioEscolar.Aplicacacao\DiarioEscolar.Aplicacacao.csproj", "{78F5405D-9A8F-42A6-944E-28C1744E05D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Camada de Domínio", "3. Camada de Domínio", "{EAA46B95-7A0F-48EE-B149-86B8308885DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiarioEscolar.Dominio", "DiarioEscolar.Dominio\DiarioEscolar.Dominio.csproj", "{F20237DF-F7F8-49FD-8A76-CEA0B4CA6F15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Camada de Infraestrutura", "4. Camada de Infraestrutura", "{551F2E0A-4A1D-41F2-9AEE-50FF062E444A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiarioEscolar.Infraestrutura.Dados", "DiarioEscolar.Infraestrutura.Dados\DiarioEscolar.Infraestrutura.Dados.csproj", "{511DD704-5E8B-4AAE-95B9-9664105FA764}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Testes", "5. Testes", "{0709426D-DA0F-4669-A278-D12E91E38CF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiarioEscolar.Teste", "DiarioEscolar.Teste\DiarioEscolar.Teste.csproj", "{1B1B0FB3-16FD-4839-A0C5-6B5788334FA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65185762-E075-4340-B168-80192BCD2584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65185762-E075-4340-B168-80192BCD2584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65185762-E075-4340-B168-80192BCD2584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65185762-E075-4340-B168-80192BCD2584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78F5405D-9A8F-42A6-944E-28C1744E05D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F5405D-9A8F-42A6-944E-28C1744E05D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F5405D-9A8F-42A6-944E-28C1744E05D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F5405D-9A8F-42A6-944E-28C1744E05D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F20237DF-F7F8-49FD-8A76-CEA0B4CA6F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20237DF-F7F8-49FD-8A76-CEA0B4CA6F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20237DF-F7F8-49FD-8A76-CEA0B4CA6F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20237DF-F7F8-49FD-8A76-CEA0B4CA6F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{511DD704-5E8B-4AAE-95B9-9664105FA764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511DD704-5E8B-4AAE-95B9-9664105FA764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511DD704-5E8B-4AAE-95B9-9664105FA764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511DD704-5E8B-4AAE-95B9-9664105FA764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1B0FB3-16FD-4839-A0C5-6B5788334FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1B0FB3-16FD-4839-A0C5-6B5788334FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1B0FB3-16FD-4839-A0C5-6B5788334FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1B0FB3-16FD-4839-A0C5-6B5788334FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{65185762-E075-4340-B168-80192BCD2584} = {AB9545F4-0F4A-40CE-86C8-277E0765B62B}
+		{78F5405D-9A8F-42A6-944E-28C1744E05D7} = {DE07AA0D-0D5A-4591-B43B-42EF231D3BD8}
+		{F20237DF-F7F8-49FD-8A76-CEA0B4CA6F15} = {EAA46B95-7A0F-48EE-B149-86B8308885DD}
+		{511DD704-5E8B-4AAE-95B9-9664105FA764} = {551F2E0A-4A1D-41F2-9AEE-50FF062E444A}
+		{1B1B0FB3-16FD-4839-A0C5-6B5788334FA5} = {0709426D-DA0F-4669-A278-D12E91E38CF4}
+	EndGlobalSection
+EndGlobal
