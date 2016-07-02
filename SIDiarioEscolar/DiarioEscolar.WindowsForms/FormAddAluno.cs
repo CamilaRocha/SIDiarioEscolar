@@ -66,7 +66,7 @@ namespace DiarioEscolar.WindowsForms
         {
             if (!editMode)
             {
-                TwitterService service = new TwitterService("69d9ZTi1Ur5A8aocRlw6cRRmp", "cLQFsrdmIWJMwodf3ryc1larrROsPWvGbwBuH3KsIZ53LliX9z");
+                TwitterService service = new TwitterService("9fHcTGpQkdy25gAQ8bFmiOd67", "KBWAa7reZWDEofMkgDluIfLVk9dEaAZAOTinUFInw5k6xNGCX6");
 
                 // Step 1 - Retrieve an OAuth Request Token
                 OAuthRequestToken requestToken = service.GetRequestToken();
@@ -76,36 +76,21 @@ namespace DiarioEscolar.WindowsForms
                 Process.Start(uri.ToString());
 
                 // Step 3 - Exchange the Request Token for an Access Token
-                string verifier = "7441704"; // <-- This is input into your application by your user
+                string verifier = "0350060"; // <-- This is input into your application by your user
                 OAuthAccessToken access = service.GetAccessToken(requestToken, verifier);
 
                 // Step 4 - User authenticates using the Access Token
                 service.AuthenticateWith(access.Token, access.TokenSecret);
-                //IEnumerable<TwitterStatus> mentions = service.ListTweetsMentioningMe(new ListTweetsMentioningMeOptions());
 
                 var aluno = new Aluno((Turma)Enum.Parse(typeof(Turma), cbxTurma.Text),
-                                        txtNome.Text,
-                                        txtSobrenome.Text,
-                                        int.Parse(txtIdade.Text),
-                                        double.Parse(txtNota.Text),
-                                        (Status)Enum.Parse(typeof(Status), cbxStatus.Text)); 
+                        txtNome.Text,
+                        txtSobrenome.Text,
+                        int.Parse(txtIdade.Text),
+                        double.Parse(txtNota.Text),
+                        (Status)Enum.Parse(typeof(Status), cbxStatus.Text));
                 _alunoAplicacao.Adicionar(aluno);
 
-                //
-
-                Console.WriteLine(service.Response.Response);
-                var profile = service.GetUserProfile(new GetUserProfileOptions());
-
-
-                //foreach (var item in tweets)
-                //{
-                //    Console.WriteLine("{0} , {1} ", item.Author.ScreenName, item.Text);
-                //    Console.WriteLine(tweet);
-                //}
-
-                //Console.ReadKey();
-
-
+                service.BeginSendTweet(new SendTweetOptions());
             }
 
             else
