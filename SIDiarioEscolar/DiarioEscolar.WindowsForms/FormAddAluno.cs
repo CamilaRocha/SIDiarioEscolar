@@ -5,11 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TweetSharp;
 
 namespace DiarioEscolar.WindowsForms
 {
@@ -64,13 +66,46 @@ namespace DiarioEscolar.WindowsForms
         {
             if (!editMode)
             {
+                TwitterService service = new TwitterService("69d9ZTi1Ur5A8aocRlw6cRRmp", "cLQFsrdmIWJMwodf3ryc1larrROsPWvGbwBuH3KsIZ53LliX9z");
+
+                // Step 1 - Retrieve an OAuth Request Token
+                OAuthRequestToken requestToken = service.GetRequestToken();
+
+                // Step 2 - Redirect to the OAuth Authorization URL
+                Uri uri = service.GetAuthorizationUri(requestToken);
+                Process.Start(uri.ToString());
+
+                // Step 3 - Exchange the Request Token for an Access Token
+                string verifier = "7441704"; // <-- This is input into your application by your user
+                OAuthAccessToken access = service.GetAccessToken(requestToken, verifier);
+
+                // Step 4 - User authenticates using the Access Token
+                service.AuthenticateWith(access.Token, access.TokenSecret);
+                //IEnumerable<TwitterStatus> mentions = service.ListTweetsMentioningMe(new ListTweetsMentioningMeOptions());
+
                 var aluno = new Aluno((Turma)Enum.Parse(typeof(Turma), cbxTurma.Text),
                                         txtNome.Text,
                                         txtSobrenome.Text,
                                         int.Parse(txtIdade.Text),
                                         double.Parse(txtNota.Text),
-                                        (Status)Enum.Parse(typeof(Status), cbxStatus.Text));                                      ;
+                                        (Status)Enum.Parse(typeof(Status), cbxStatus.Text)); 
                 _alunoAplicacao.Adicionar(aluno);
+
+                //
+
+                Console.WriteLine(service.Response.Response);
+                var profile = service.GetUserProfile(new GetUserProfileOptions());
+
+
+                //foreach (var item in tweets)
+                //{
+                //    Console.WriteLine("{0} , {1} ", item.Author.ScreenName, item.Text);
+                //    Console.WriteLine(tweet);
+                //}
+
+                //Console.ReadKey();
+
+
             }
 
             else
